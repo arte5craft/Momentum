@@ -1,0 +1,174 @@
+body {
+    background: #4e438d;
+}
+
+#menubar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0px;
+    border-color: rgb(40, 41, 124);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(40, 41, 124);
+}
+
+
+#menubar li :hover {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    
+}
+/* thi is for the brand name on the top left*/
+#menubar .navbar-brand {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-family: 'times new roman';
+}
+/* the words money tracker, graph and yearly progrss*/
+#menubar li a {
+    color: #ffffff;
+    opacity: 100%;
+    font-size: 20px;
+    
+    font-family: Figtree variablefont wght, sans-serif
+
+}
+
+#segment1{
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-family: "Times New Roman";
+    text-align: center;
+    
+}
+/* FIRST ORANGE PART*/
+.custom-shape-divider-bottom-1722790158 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1722790158 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1722790158 .shape-fill {
+    fill: #ff792c;
+}
+/* FIRST BLUE PART */
+#blue1 {
+    background-color: #4E438D;
+    margin-top: 100px;
+}
+.custom-shape-divider-bottom-1722792371 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1722792371 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 152px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1722792371 .shape-fill {
+    fill: #4E438D;
+}
+
+#web-graphic {
+    margin: 0 auto;
+    margin-top: 0px;
+    width: 200px;
+    height: 200px;
+    background-image: url('dollarbill.png');
+    background-size: 100% 100%;
+}
+#orange1{
+    background-color: #ff792c;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+#home-content {
+    margin-top: 9px;
+    background-color: #ff792c;
+    margin-left: 20;
+    margin-bottom: 25px;
+}
+
+#firstp .col-sm-6 h3{
+    font-family: "times new roman";
+    color: #ffffff;
+    text-align: center;
+}
+
+#firstp .col-sm-6 h4{
+    font-family: garamond;
+    line-height: 30px;
+    font-size: 28px;
+    text-align: left;
+    margin-left: 100px;
+    width: 1000px;
+    color: #ffffff;
+
+}
+#home-content .col-sm-6 h3 {
+    margin-top: 75px;
+    text-align: left;
+    margin-left: 100px;
+    font-family: "Times New Roman", Gadget, sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+#home-content .col-sm-6 h4 {
+    text-align: left;
+    line-height: 30px;
+    font-family: "Garamond", cursive, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+#home-content .graph1 {
+    margin: 0 auto;
+    margin-top: 0px;
+    width: 350px;
+    height: 350px;
+    background-image: url('debt-quadrupled1.PNG');
+    background-size: 100% 100%;
+}
+#home-content .graph2 {
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 350px;
+    height: 350px;
+    background-image: url('graph2.png');
+    background-size: 100% 100%;
+}
+.footer {
+    margin-top: 200px;
+    padding-top: 28px;
+    padding-bottom: 22px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    font-family: "times new roman";
+}
+
+@media only screen and (max-width:480px){
+
+}
