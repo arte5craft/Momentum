@@ -1,119 +1,185 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Momentum</title>
-    
-        <!-- Latest compiled and minified CSS -->
-        <link
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         />
-    
-        <link rel="stylesheet" href="style.css" />
-    
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      </head>
-    <body>
-        
-        <nav class="navbar navbar-inverse" id="menubar">
-          <div class="container-fluid" id="navbar">
-            <div class="navbar-header">
-                <!-- WE NEED TO ADD THE WORD LOGO INSTEAD OF THE TEXT--> 
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="icon" type="image/x-icon" href="favicon2-removebg-preview.png">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-              <a class="navbar-brand" href="index.html">Momentum</a>
-            </div>
-
-            <ul class="nav navbar-nav">
-              <li><a href="manager.html">Money Tracker</a></li>
-              <li><a href="Graph.html">Graph</a></li>
-              <li><a href="Yearly Progrss.html"> Yearly Progrss</a></li>
-            </ul>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body> 
+    <nav class="navbar navbar-inverse" id="menubar">
+        <div class="container-fluid" id="navbar">
+          <div class="navbar-header" id="navbar-header">
+            <a class="navbar-brand" href="#"><img src="wordlogo-removebg-preview.png" height="auto" width="175px"></a>
           </div>
-        </nav>
-        
-        <h1 id="segment1">Your Gateway To Financial Freedom</h1>
-        <br>
-            <section>
-              <div class="container" id="firstp">
-                <div class="row"></div>
-                  <div class="col-sm-6">
-                    <h3>Our Purpose</h3>
-                    <h4>
-                        <li>Help college students attain financial freedom.</li>
-                        <li>Reduce Mental health issues & anxiety due to debt.</li>
-                        <li>College Students build good credit.</li>
-                        <li>Improve overall quality of Life.</li>
-                    </h4>
-                  </div>
-                  <!-- THERE SHOULD BE A PITURE OF A GIRL OR MONEY OR STOCK MARKET-->
-                </div>
-              </div>
-            </section>
-            <br><br><br><br><br><br><br><br><br><br><br>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="manager.html">Money Tracker</a></li>
+            <li><a href="graph.html">Graphical view</a></li>
+            <li><a href="year.html">Yearly View</a></li>        
+          </ul>
+          <!-- *********************************************************************
+            *************TOGGLE SWITCHES**********************
+            ************************************************************************
+          <input type="checkbox" id="darkmode-toggle"/>
+    <label for="darkmode-toggle"></label>
+    <div class="background"></div>
 
-            <section class="orange" id="orange1">
-                <div class="custom-shape-divider-bottom-1722790158">
-                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                      <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
-                  </svg>
+            From Uiverse.io by Galahhad
+            <label class="ui-switch">
+              <input type="checkbox">
+              <div class="slider">
+                <div class="circle"></div>
               </div>
-                <div class="container" id="home-content">
-             <div class="row">
-              <div class="col-sm-6">
-                <h3>Student loan over the years</h3>
-                <h4>
-                  Our users can save tons of money by creating personalized budgets
-                  on our website. People have saved thousands of dollars because of
-                  professional money management and budgeting. Our website is a free
-                  to use public utility that helps professionals and regular people
-                  manage their budgets. Sign up to save your budget profiles and track
-                  how much money you saved!
-                </h4>
-              </div>
-              <br><br><br><br>
-              <div class="col-sm-6" id="graph1">
-                <div class="graph1"></div>
-              </div>
-            </div>
-          </div>
-            <br><br><br>
-            </section>
-            <section class="blue" id="blue1">
+            </label>-->
+        </div>
+    </nav>
+    <div class="container-fluid" id="intro">
+        <h1>Your Gateway To Financial Freedom</h1>
+        <img src="Debt-free-photo.jpg" height="300px" width="auto" id="img1">
+        <h3 id="intro1"> Our Purpose</h3>
+        <h4 id="intro2">
+            <li>Help college students attain financial freedom.</li>
+            <li>Reduce Mental health issues & anxiety due to debt.</li>
+            <li>College Students build good credit.</li>
+            <li>Improve overall quality of Life.</li>
+        </h4>
+    </div>
+    <div class="custom-shape-divider-top-1722846527">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="container-fluid" id="home-content">
+        <div class="row">
+          <div class="col-sm-6">
             
-                <div class="row">
-                  <div class="col-sm-6" id="graph2">
-                    <div class="graph2"></div>
-                  </div>
-                  <div class="custom-shape-divider-bottom-1722792371">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -300 1200 120">
-                        <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
-                    </svg>
-                </div>
-                  <br><br><br><br><br><br><br>
-                  <div class="col-sm-6">
-                    <h3>Learn budgeting</h3>
-                    <h4>
-                      On top of saving money and organizing your finances, our website
-                      provides powerful free tools that will enhance your understanding
-                      about creating efficient budgets and saving money. Using this
-                      website helps users understand how to manage and track personalized
-                      budgets.
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              </section>
-              
-     <div class="footer">
-              <p>
-                  Author: Dhyeya Anand & Shriya Arunkumar 
-              </p>
+            <h3>Student loan over the years</h3>
+            <h4>
+              Our users can save tons of money by creating personalized budgets
+              on our website. People have saved thousands of dollars because of
+              professional money management and budgeting. Our website is a free
+              to use public utility that helps professionals and regular people
+              manage their budgets. Sign up to save your budget profiles and track
+              how much money you saved!
+            </h4>
           </div>
-    </body>
+
+          <div class="col-sm-6" id="graph1">
+            <div class="graph1"></div>
+          </div>
+        </div>
+      </div>    
+      <div class="custom-shape-divider-top-1722847261">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+        </div>
+           
+      <div class="container-fluid" id="para">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3> GRAPH 2</h3>
+                <h4> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quisquam, odit iure assumenda iusto voluptas magnam suscipit alias tempore dolorum cum temporibus rerum voluptates eos doloribus quis cumque dolores! Aspernatur.</h4>
+            </div>
+
+            <div class="col-sm-6" id="graph2">
+                <div class="graph2"></div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="custom-shape-divider-top-1722853860">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="container-fluid" id="stories">
+        <div class="box">
+
+        </div>
+    </div>
+
+
+<BR><BR><BR><BR>
+
+    
+    <!--From Uiverse.io by ElSombrero2
+    ********************************************************************
+    ***STILL WORKING ON THIS SECTION DON'T EDIT********
+    *****************************************************************-->
+<div class="card">
+  <div class="content">
+    <div class="back">
+      <div class="back-content">
+        <img src="Debt-free-photo.jpg" height="180px" width="auto">
+
+        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+
+        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+
+        <g id="SVGRepo_iconCarrier">
+
+        <path d="M20.84375 0.03125C20.191406 0.0703125 19.652344 0.425781 19.21875 1.53125C18.988281 2.117188 18.5 3.558594 18.03125 4.9375C17.792969 5.636719 17.570313 6.273438 17.40625 6.75C17.390625 6.796875 17.414063 6.855469 17.40625 6.90625C17.398438 6.925781 17.351563 6.949219 17.34375 6.96875L17.25 7.25C18.566406 7.65625 19.539063 8.058594 19.625 8.09375C22.597656 9.21875 28.351563 11.847656 33.28125 16.78125C38.5 22 41.183594 28.265625 42.09375 30.71875C42.113281 30.761719 42.375 31.535156 42.75 32.84375C42.757813 32.839844 42.777344 32.847656 42.78125 32.84375C43.34375 32.664063 44.953125 32.09375 46.3125 31.625C47.109375 31.351563 47.808594 31.117188 48.15625 31C49.003906 30.714844 49.542969 30.292969 49.8125 29.6875C50.074219 29.109375 50.066406 28.429688 49.75 27.6875C49.605469 27.347656 49.441406 26.917969 49.25 26.4375C47.878906 23.007813 45.007813 15.882813 39.59375 10.46875C33.613281 4.484375 25.792969 1.210938 22.125 0.21875C21.648438 0.0898438 21.234375 0.0078125 20.84375 0.03125 Z M 16.46875 9.09375L0.0625 48.625C-0.09375 48.996094 -0.00390625 49.433594 0.28125 49.71875C0.472656 49.910156 0.738281 50 1 50C1.128906 50 1.253906 49.988281 1.375 49.9375L40.90625 33.59375C40.523438 32.242188 40.222656 31.449219 40.21875 31.4375C39.351563 29.089844 36.816406 23.128906 31.875 18.1875C27.035156 13.34375 21.167969 10.804688 18.875 9.9375C18.84375 9.925781 17.8125 9.5 16.46875 9.09375 Z M 17 16C19.761719 16 22 18.238281 22 21C22 23.761719 19.761719 26 17 26C15.140625 26 13.550781 24.972656 12.6875 23.46875L15.6875 16.1875C16.101563 16.074219 16.550781 16 17 16 Z M 31 22C32.65625 22 34 23.34375 34 25C34 25.917969 33.585938 26.730469 32.9375 27.28125L32.90625 27.28125C33.570313 27.996094 34 28.949219 34 30C34 32.210938 32.210938 34 30 34C27.789063 34 26 32.210938 26 30C26 28.359375 26.996094 26.960938 28.40625 26.34375L28.3125 26.3125C28.117188 25.917969 28 25.472656 28 25C28 23.34375 29.34375 22 31 22 Z M 21 32C23.210938 32 25 33.789063 25 36C25 36.855469 24.710938 37.660156 24.25 38.3125L20.3125 39.9375C18.429688 39.609375 17 37.976563 17 36C17 33.789063 18.789063 32 21 32 Z M 9 34C10.65625 34 12 35.34375 12 37C12 38.65625 10.65625 40 9 40C7.902344 40 6.960938 39.414063 6.4375 38.53125L8.25 34.09375C8.488281 34.03125 8.742188 34 9 34Z"></path>
+
+        </g>
+
+        </svg>
+        <strong>This Is Max</strong>
+      </div>
+    </div>
+    <div class="front">
+      
+      <div class="img">
+        <div class="circle">
+        </div>
+        <div class="circle" id="right">
+        </div>
+        <div class="circle" id="bottom">
+        </div>
+      </div>
+
+      <div class="front-content">
+        <small class="badge">MAX</small>
+        <div class="description">
+          <div class="title">
+            <p class="title">
+                I realised the biggest mistake i made after i started using this tool. it's Life changing!!!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--****************************************************************************
+    *************GOING TO ADD 2 MORE CARDS LIKE THIS*****************
+    ****************************************************************************-->
+
+
+    
+        <div class="footer">
+        <p>
+            Author: Dhyeya Anand & Shriya Arunkumar 
+        </p>
+    </div>
+</body>
 </html>
