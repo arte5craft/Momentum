@@ -28,6 +28,41 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
+    <!-- Firebase authentication -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+
+    <script type="text/javascript">
+        const firebaseConfig = {
+            apiKey: "AIzaSyDjE2h79QhX1ISiLWAyRZGrsQPO4bymJew",
+            authDomain: "hackathon-d0863.firebaseapp.com",
+            projectId: "hackathon-d0863",
+            storageBucket: "hackathon-d0863.appspot.com",
+            messagingSenderId: "720368335999",
+            appId: "1:720368335999:web:2351f6e50ae1c1d68f534a",
+            measurementId: "G-T1D63FBZY1"
+        };
+
+        var uid;
+        var app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        initApp = function() {
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    // User is signed in.
+                    console.log('User signed in:', user);
+                } else {
+                    // User is signed out.
+                    console.log('User signed out');
+                }
+            });
+        };
+
+        window.addEventListener("load", function() {
+            initApp();
+        });
+    </script>
 </head>
 
 <body class="index-page">
@@ -43,9 +78,9 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">Home<br></a></li>
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Log out</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -91,9 +126,8 @@
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="card">
                             <img src="assets/img/values-1.png" class="img-fluid" alt="">
-                            <h3>Student loan over the years</h3>
-                            <p>Our users can save tons of money by creating personalized budgets on our website. People have saved thousands of dollars because of professional money management and budgeting. Our website is a free to use public utility that
-                                helps professionals and regular people manage their budgets. Sign up to save your budget profiles and track how much money you saved!</p>
+                            <h3>Financial Empowerment</h3>
+                            <p>Committed to providing students with the tools, knowledge, and resources to take control of their financial future. This includes education on budgeting, understanding loans, and making informed financial decisions.</p>
                         </div>
                     </div>
                     <!-- End Card Item -->
@@ -101,8 +135,8 @@
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="card">
                             <img src="assets/img/values-2.png" class="img-fluid" alt="">
-                            <h3>Voluptatem voluptatum alias</h3>
-                            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+                            <h3>Transparency</h3>
+                            <p>Prioritizing clear, honest communication about financial products, fees, and services. This ensures students understand their financial options without hidden costs or confusing terms.</p>
                         </div>
                     </div>
                     <!-- End Card Item -->
@@ -110,8 +144,8 @@
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="card">
                             <img src="assets/img/values-3.png" class="img-fluid" alt="">
-                            <h3>Fugit cupiditate alias nobis.</h3>
-                            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+                            <h3>Accessibility</h3>
+                            <p>Ensuring that financial assistance and educational resources are available to all students, regardless of their background or financial situation, making it easier for them to manage their finances effectively.</p>
                         </div>
                     </div>
                     <!-- End Card Item -->
@@ -140,48 +174,19 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item item-cyan position-relative">
                             <i class="bi bi-activity icon"></i>
-                            <h3>Nesciunt Mete</h3>
+                            <h3>Budgeting tool</h3>
                             <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
                             <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
 
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item item-orange position-relative">
-                            <i class="bi bi-broadcast icon"></i>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item item-teal position-relative">
                             <i class="bi bi-easel icon"></i>
-                            <h3>Ledo Markt</h3>
+                            <h3>Investing Advice</h3>
                             <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-item item-red position-relative">
-                            <i class="bi bi-bounding-box-circles icon"></i>
-                            <h3>Asperiores Commodi</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-item item-indigo position-relative">
-                            <i class="bi bi-calendar4-week icon"></i>
-                            <h3>Velit Doloremque.</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
                             <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -190,7 +195,7 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item item-pink position-relative">
                             <i class="bi bi-chat-square-text icon"></i>
-                            <h3>Dolori Architecto</h3>
+                            <h3>AI based Recommendations</h3>
                             <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
                             <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
                         </div>
@@ -384,35 +389,13 @@
 
     <footer id="footer" class="footer">
 
-        <!--   <div class="footer-newsletter">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-6">
-                        <h4>Join Our Newsletter</h4>
-                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-                        <form action="forms/newsletter.php" method="post" class="php-email-form">
-                            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center">
-                        <span class="sitename">FlexStart</span>
+                        <span class="sitename">Momentum</span>
                     </a>
-                    <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
-                    </div>
+
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
@@ -446,17 +429,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">FlexStart</strong> <span>All Rights Reserved</span></p>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
             </div>
         </div>
 
