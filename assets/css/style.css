@@ -347,7 +347,7 @@ section {
 /* **********************************************************************
 ****************************Graph *****************************************/
 #debt1{
-    margin-left: 5%;
+    margin-left: 7%;
     line-height: 33px;
     font-size: 20px;
     margin-top: 3%;
@@ -404,25 +404,36 @@ section {
   font-weight: bolder;
   color: var(--primary-color);
   margin-top: 7%;
-  margin-left: 5%;
+  margin-left: 7%;
 }
+
+#heading3{
+  font-family:'Courier New', Courier, monospace !important;
+  font-size: 40px !important;
+  font-weight: bolder;
+  color: var(--primary-color);
+  margin-top: 7%;
+  margin-left: 7%;
+}
+
 #stories{
   margin-top: 0 !important;
-  animation: appear linear;
+  animation: slideUp;
   animation-timeline: view();
   animation-range: entry 0;
 }
 
 
-@keyframes appear{
-  from{
-    opacity: 0;
-    transform: translateX(-100px);
+@keyframes slideUp{
+   from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
   }
-  to{
-    opacity: 1;
-    transform: translateX(0px);
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
+}
 }
 
 
@@ -586,7 +597,6 @@ section {
     background-color: #ffbb66;
     position: relative;
     filter: blur(15px);
-    animation: floating 2600ms infinite linear;
   }
   
   #bottom {
