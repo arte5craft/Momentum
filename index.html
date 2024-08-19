@@ -1,455 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Momentum - Home</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentum</title>
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/wired-lineal-298-coins.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ruwudu&display=swap" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
-
-    <!-- Firebase authentication -->
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
-
-    <script type="text/javascript">
-        const firebaseConfig = {
-            apiKey: "AIzaSyDjE2h79QhX1ISiLWAyRZGrsQPO4bymJew",
-            authDomain: "hackathon-d0863.firebaseapp.com",
-            projectId: "hackathon-d0863",
-            storageBucket: "hackathon-d0863.appspot.com",
-            messagingSenderId: "720368335999",
-            appId: "1:720368335999:web:2351f6e50ae1c1d68f534a",
-            measurementId: "G-T1D63FBZY1"
-        };
-
-        var uid;
-        var app = firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-        initApp = function() {
-            firebase.auth().onAuthStateChanged((user) => {
-                if (user) {
-                    // User is signed in.
-                    console.log('User signed in:', user);
-                } else {
-                    // User is signed out.
-                    console.log('User signed out');
-                }
-            });
-        };
-
-        window.addEventListener("load", function() {
-            initApp();
-        });
-    </script>
 </head>
-
-<body class="index-page">
-
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
-                <img src="assets/img/logo.png" alt="">
-                <h1 class="sitename">Momentum</h1>
-            </a>
-
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="#hero" class="active">Home<br></a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="login.html">Log out</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
-    </header>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="#">Stock Market</a></li>
+        </ul>
+        <h1 class="logo"> <img src="assets/img/wordlogo-removebg-preview.png" width="50%"> </h1>
+    </div>
+  </nav>
+  
+  <section>
+  
+    <div class="container">
 
-    <main class="main">
+      <!-- toggle -->
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section">
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox"/>
+          <div class="slider round"></div>
+        </label>
+      </div>
 
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up">Your Gateway to Financial freedom</h1>
-                        <p data-aos="fade-up" data-aos-delay="100">The goal is to assist college students in achieving financial independence, which in turn can help reduce mental health issues and anxiety often associated with debt. By focusing on helping students build strong credit, we aim
-                            to enhance their overall quality of life.</p>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
-                    </div>
-                </div>
-            </div>
+      <img id="bg" src="assets/img/world-bg.png" alt="Snow" style="width:100%;">
 
-        </section>
-        <!-- /Hero Section -->
+      <div class="bottom-left">
+        Track every dollar, Achieve every goal <br>Mater your Finances with EASE
+      </div>
 
-        <!-- Values Section -->
-        <section id="values" class="values section">
+      <div class="top-left">Your Gateway to<br> Financial Freedom</div>
+    </div>
 
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Our Values</h2>
-                <p>What we value most<br></p>
-            </div>
-            <!-- End Section Title -->
+    <div class="box" id="debt1">
+      <img id="graph" src="assets/img/Bar_Graph__1_-removebg-preview.png">
+          <h2 id="heading1"> Student Loans over the years</h2>
+          
+        <p>
+          <ul>
+            <li> - In the past 15 years, the total U.S. student loan debt balance has more than doubled, from $772 billion in 2009 to $1.75 trillion in 2024.</li>
+            <li> - Over the past 10 years, the debt balance has increased 42%.</li>
+            <li> - While total student debt continues to grow each year, its growth rate has slowed significantly in the recent past.</li>
+          </ul> 
+          </p>
+          <p id="resource">
+          Resource: https://www.bestcolleges.com/
+        </p>
+        
+    </div>
+  <div>
+    <h2 id="heading2">Testimonial</h2>
 
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <img src="assets/img/values-1.png" class="img-fluid" alt="">
-                            <h3>Financial Empowerment</h3>
-                            <p>Committed to providing students with the tools, knowledge, and resources to take control of their financial future. This includes education on budgeting, understanding loans, and making informed financial decisions.</p>
+    <div class="container-fluid" id="stories">
+      <table class="center" id="table"> 
+        <tr>
+            <th id="first"> 
+                <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="assets/img/p1.png" height="180px" width="auto">
+                  
+                          <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                  
+                          <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                  
+                          <g id="SVGRepo_iconCarrier">
+                  
+                          <path d="M20.84375 0.03125C20.191406 0.0703125 19.652344 0.425781 19.21875 1.53125C18.988281 2.117188 18.5 3.558594 18.03125 4.9375C17.792969 5.636719 17.570313 6.273438 17.40625 6.75C17.390625 6.796875 17.414063 6.855469 17.40625 6.90625C17.398438 6.925781 17.351563 6.949219 17.34375 6.96875L17.25 7.25C18.566406 7.65625 19.539063 8.058594 19.625 8.09375C22.597656 9.21875 28.351563 11.847656 33.28125 16.78125C38.5 22 41.183594 28.265625 42.09375 30.71875C42.113281 30.761719 42.375 31.535156 42.75 32.84375C42.757813 32.839844 42.777344 32.847656 42.78125 32.84375C43.34375 32.664063 44.953125 32.09375 46.3125 31.625C47.109375 31.351563 47.808594 31.117188 48.15625 31C49.003906 30.714844 49.542969 30.292969 49.8125 29.6875C50.074219 29.109375 50.066406 28.429688 49.75 27.6875C49.605469 27.347656 49.441406 26.917969 49.25 26.4375C47.878906 23.007813 45.007813 15.882813 39.59375 10.46875C33.613281 4.484375 25.792969 1.210938 22.125 0.21875C21.648438 0.0898438 21.234375 0.0078125 20.84375 0.03125 Z M 16.46875 9.09375L0.0625 48.625C-0.09375 48.996094 -0.00390625 49.433594 0.28125 49.71875C0.472656 49.910156 0.738281 50 1 50C1.128906 50 1.253906 49.988281 1.375 49.9375L40.90625 33.59375C40.523438 32.242188 40.222656 31.449219 40.21875 31.4375C39.351563 29.089844 36.816406 23.128906 31.875 18.1875C27.035156 13.34375 21.167969 10.804688 18.875 9.9375C18.84375 9.925781 17.8125 9.5 16.46875 9.09375 Z M 17 16C19.761719 16 22 18.238281 22 21C22 23.761719 19.761719 26 17 26C15.140625 26 13.550781 24.972656 12.6875 23.46875L15.6875 16.1875C16.101563 16.074219 16.550781 16 17 16 Z M 31 22C32.65625 22 34 23.34375 34 25C34 25.917969 33.585938 26.730469 32.9375 27.28125L32.90625 27.28125C33.570313 27.996094 34 28.949219 34 30C34 32.210938 32.210938 34 30 34C27.789063 34 26 32.210938 26 30C26 28.359375 26.996094 26.960938 28.40625 26.34375L28.3125 26.3125C28.117188 25.917969 28 25.472656 28 25C28 23.34375 29.34375 22 31 22 Z M 21 32C23.210938 32 25 33.789063 25 36C25 36.855469 24.710938 37.660156 24.25 38.3125L20.3125 39.9375C18.429688 39.609375 17 37.976563 17 36C17 33.789063 18.789063 32 21 32 Z M 9 34C10.65625 34 12 35.34375 12 37C12 38.65625 10.65625 40 9 40C7.902344 40 6.960938 39.414063 6.4375 38.53125L8.25 34.09375C8.488281 34.03125 8.742188 34 9 34Z"></path>
+                  
+                          </g>
+                  
+                          </svg>
+                          <strong>Meet Max</strong>
                         </div>
-                    </div>
-                    <!-- End Card Item -->
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card">
-                            <img src="assets/img/values-2.png" class="img-fluid" alt="">
-                            <h3>Transparency</h3>
-                            <p>Prioritizing clear, honest communication about financial products, fees, and services. This ensures students understand their financial options without hidden costs or confusing terms.</p>
+                      </div>
+                      <div class="front">
+                        
+                        <div class="img">
+                          <div class="circle">
+                          </div>
+                          <div class="circle" id="right">
+                          </div>
+                          <div class="circle" id="bottom">
+                          </div>
                         </div>
-                    </div>
-                    <!-- End Card Item -->
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card">
-                            <img src="assets/img/values-3.png" class="img-fluid" alt="">
-                            <h3>Accessibility</h3>
-                            <p>Ensuring that financial assistance and educational resources are available to all students, regardless of their background or financial situation, making it easier for them to manage their finances effectively.</p>
-                        </div>
-                    </div>
-                    <!-- End Card Item -->
-
-                </div>
-
-            </div>
-
-        </section>
-        <!-- /Values Section -->
-
-        <!-- Services Section -->
-        <section id="services" class="services section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Services</h2>
-                <p>Check Our Services<br></p>
-            </div>
-            <!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item item-cyan position-relative">
-                            <i class="bi bi-activity icon"></i>
-                            <h3>Budgeting tool</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item item-teal position-relative">
-                            <i class="bi bi-easel icon"></i>
-                            <h3>Investing Advice</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-item item-pink position-relative">
-                            <i class="bi bi-chat-square-text icon"></i>
-                            <h3>AI based Recommendations</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                </div>
-
-            </div>
-
-        </section>
-        <!-- /Services Section -->
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Testimonials</h2>
-                <p>What they are saying about us<br></p>
-            </div>
-            <!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="swiper init-swiper">
-                    <script type="application/json" class="swiper-config">
-                        {
-                            "loop": true,
-                            "speed": 600,
-                            "autoplay": {
-                                "delay": 5000
-                            },
-                            "slidesPerView": "auto",
-                            "pagination": {
-                                "el": ".swiper-pagination",
-                                "type": "bullets",
-                                "clickable": true
-                            },
-                            "breakpoints": {
-                                "320": {
-                                    "slidesPerView": 1,
-                                    "spaceBetween": 40
-                                },
-                                "1200": {
-                                    "slidesPerView": 3,
-                                    "spaceBetween": 1
-                                }
-                            }
-                        }
-                    </script>
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                </div>
+                  
+                        <div class="front-content">
+                          <small class="badge">MAX</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                  I realised the biggest mistake I made after I started using this tool. It's Life changing!
+                              </p>
                             </div>
+                          </div>
                         </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    I realised the biggest mistake i made after i started using this tool. it's Life changing!!!
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                    <h3>Max</h3>
-                                    <h4>Freelancer</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
+                      </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-
-        </section>
-        <!-- /Testimonials Section -->
-
-        <!-- Team Section -->
-        <section id="team" class="team section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Team</h2>
-            </div>
-            <!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row d-flex justify-content-center">
-
-                    <div class="col-lg-3 col-md-3 align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-1.jpg" class="d-none img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Shriya Arunkumar</h4>
-                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-                            </div>
+                  </div>
+                  </div>
+            </th>
+    
+    
+            <th id="second">
+                <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="assets/img/p2.png" height="180px" width="auto">
+                  
+                          <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                  
+                          <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                  
+                          <g id="SVGRepo_iconCarrier">
+                  
+                          <path d="M20.84375 0.03125C20.191406 0.0703125 19.652344 0.425781 19.21875 1.53125C18.988281 2.117188 18.5 3.558594 18.03125 4.9375C17.792969 5.636719 17.570313 6.273438 17.40625 6.75C17.390625 6.796875 17.414063 6.855469 17.40625 6.90625C17.398438 6.925781 17.351563 6.949219 17.34375 6.96875L17.25 7.25C18.566406 7.65625 19.539063 8.058594 19.625 8.09375C22.597656 9.21875 28.351563 11.847656 33.28125 16.78125C38.5 22 41.183594 28.265625 42.09375 30.71875C42.113281 30.761719 42.375 31.535156 42.75 32.84375C42.757813 32.839844 42.777344 32.847656 42.78125 32.84375C43.34375 32.664063 44.953125 32.09375 46.3125 31.625C47.109375 31.351563 47.808594 31.117188 48.15625 31C49.003906 30.714844 49.542969 30.292969 49.8125 29.6875C50.074219 29.109375 50.066406 28.429688 49.75 27.6875C49.605469 27.347656 49.441406 26.917969 49.25 26.4375C47.878906 23.007813 45.007813 15.882813 39.59375 10.46875C33.613281 4.484375 25.792969 1.210938 22.125 0.21875C21.648438 0.0898438 21.234375 0.0078125 20.84375 0.03125 Z M 16.46875 9.09375L0.0625 48.625C-0.09375 48.996094 -0.00390625 49.433594 0.28125 49.71875C0.472656 49.910156 0.738281 50 1 50C1.128906 50 1.253906 49.988281 1.375 49.9375L40.90625 33.59375C40.523438 32.242188 40.222656 31.449219 40.21875 31.4375C39.351563 29.089844 36.816406 23.128906 31.875 18.1875C27.035156 13.34375 21.167969 10.804688 18.875 9.9375C18.84375 9.925781 17.8125 9.5 16.46875 9.09375 Z M 17 16C19.761719 16 22 18.238281 22 21C22 23.761719 19.761719 26 17 26C15.140625 26 13.550781 24.972656 12.6875 23.46875L15.6875 16.1875C16.101563 16.074219 16.550781 16 17 16 Z M 31 22C32.65625 22 34 23.34375 34 25C34 25.917969 33.585938 26.730469 32.9375 27.28125L32.90625 27.28125C33.570313 27.996094 34 28.949219 34 30C34 32.210938 32.210938 34 30 34C27.789063 34 26 32.210938 26 30C26 28.359375 26.996094 26.960938 28.40625 26.34375L28.3125 26.3125C28.117188 25.917969 28 25.472656 28 25C28 23.34375 29.34375 22 31 22 Z M 21 32C23.210938 32 25 33.789063 25 36C25 36.855469 24.710938 37.660156 24.25 38.3125L20.3125 39.9375C18.429688 39.609375 17 37.976563 17 36C17 33.789063 18.789063 32 21 32 Z M 9 34C10.65625 34 12 35.34375 12 37C12 38.65625 10.65625 40 9 40C7.902344 40 6.960938 39.414063 6.4375 38.53125L8.25 34.09375C8.488281 34.03125 8.742188 34 9 34Z"></path>
+                  
+                          </g>
+                  
+                          </svg>
+                          <strong>Meet GEREMY</strong>
                         </div>
-                    </div>
-                    <!-- End Team Member -->
-
-                    <div class="col-lg-3 col-md-3 align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="team-member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-2.jpg" class="d-none img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Dhyeya Anand</h4>
-                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-                            </div>
+                      </div>
+                      <div class="front">
+                        
+                        <div class="img">
+                          <div class="circle">
+                          </div>
+                          <div class="circle" id="right">
+                          </div>
+                          <div class="circle" id="bottom">
+                          </div>
                         </div>
+                  
+                        <div class="front-content">
+                          <small class="badge">GEREMY</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                This budget tracker has transformed my finances! It's easy to use, provides clear insights, and has helped me save more and manage my spending better. Highly recommend it!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <!-- End Team Member -->
-
-                </div>
-
-            </div>
-
-        </section>
-        <!-- /Team Section -->
-    </main>
-
-    <footer id="footer" class="footer">
-
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="d-flex align-items-center">
-                        <span class="sitename">Momentum</span>
-                    </a>
-
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-12">
-                    <h4>Follow Us</h4>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-                    <div class="social-links d-flex">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>  
+            </th>
+    
+            <th id="third">
+                <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img id="p3" src="assets/img/p3.jpg" height="180px" width="auto">
+                  
+                          <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                  
+                          <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                  
+                          <g id="SVGRepo_iconCarrier">
+                  
+                          <path d="M20.84375 0.03125C20.191406 0.0703125 19.652344 0.425781 19.21875 1.53125C18.988281 2.117188 18.5 3.558594 18.03125 4.9375C17.792969 5.636719 17.570313 6.273438 17.40625 6.75C17.390625 6.796875 17.414063 6.855469 17.40625 6.90625C17.398438 6.925781 17.351563 6.949219 17.34375 6.96875L17.25 7.25C18.566406 7.65625 19.539063 8.058594 19.625 8.09375C22.597656 9.21875 28.351563 11.847656 33.28125 16.78125C38.5 22 41.183594 28.265625 42.09375 30.71875C42.113281 30.761719 42.375 31.535156 42.75 32.84375C42.757813 32.839844 42.777344 32.847656 42.78125 32.84375C43.34375 32.664063 44.953125 32.09375 46.3125 31.625C47.109375 31.351563 47.808594 31.117188 48.15625 31C49.003906 30.714844 49.542969 30.292969 49.8125 29.6875C50.074219 29.109375 50.066406 28.429688 49.75 27.6875C49.605469 27.347656 49.441406 26.917969 49.25 26.4375C47.878906 23.007813 45.007813 15.882813 39.59375 10.46875C33.613281 4.484375 25.792969 1.210938 22.125 0.21875C21.648438 0.0898438 21.234375 0.0078125 20.84375 0.03125 Z M 16.46875 9.09375L0.0625 48.625C-0.09375 48.996094 -0.00390625 49.433594 0.28125 49.71875C0.472656 49.910156 0.738281 50 1 50C1.128906 50 1.253906 49.988281 1.375 49.9375L40.90625 33.59375C40.523438 32.242188 40.222656 31.449219 40.21875 31.4375C39.351563 29.089844 36.816406 23.128906 31.875 18.1875C27.035156 13.34375 21.167969 10.804688 18.875 9.9375C18.84375 9.925781 17.8125 9.5 16.46875 9.09375 Z M 17 16C19.761719 16 22 18.238281 22 21C22 23.761719 19.761719 26 17 26C15.140625 26 13.550781 24.972656 12.6875 23.46875L15.6875 16.1875C16.101563 16.074219 16.550781 16 17 16 Z M 31 22C32.65625 22 34 23.34375 34 25C34 25.917969 33.585938 26.730469 32.9375 27.28125L32.90625 27.28125C33.570313 27.996094 34 28.949219 34 30C34 32.210938 32.210938 34 30 34C27.789063 34 26 32.210938 26 30C26 28.359375 26.996094 26.960938 28.40625 26.34375L28.3125 26.3125C28.117188 25.917969 28 25.472656 28 25C28 23.34375 29.34375 22 31 22 Z M 21 32C23.210938 32 25 33.789063 25 36C25 36.855469 24.710938 37.660156 24.25 38.3125L20.3125 39.9375C18.429688 39.609375 17 37.976563 17 36C17 33.789063 18.789063 32 21 32 Z M 9 34C10.65625 34 12 35.34375 12 37C12 38.65625 10.65625 40 9 40C7.902344 40 6.960938 39.414063 6.4375 38.53125L8.25 34.09375C8.488281 34.03125 8.742188 34 9 34Z"></path>
+                  
+                          </g>
+                  
+                          </svg>
+                          <strong>Meet HANNAH</strong>
+                        </div>
+                      </div>
+                      <div class="front">
+                        
+                        <div class="img">
+                          <div class="circle">
+                          </div>
+                          <div class="circle" id="right">
+                          </div>
+                          <div class="circle" id="bottom">
+                          </div>
+                        </div>
+                  
+                        <div class="front-content">
+                          <small class="badge">HANNAH</small>
+                          <div class="description">
+                            <div class="title">
+                              <p class="title">
+                                “This budget tracker is fantastic! It’s simple, effective, and has made budgeting effortless, helping me save more and track my spending with ease. I couldn’t be happier!”
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+              </th>
+            </tr>
+    </table>
 
-            </div>
-        </div>
 
-    </footer>
+    <div class="container" id="creators">
+      <h2>  Meet the Creators  </h2>
+      <div class="slide-right">
+        <img src="assets/img/p1.png" height="250px" width="250px">
+        <p> SHRIYA </p>
+      </div>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <div class="slide-left">
+        <img src="assets/img/p1.png" height="250px" width="250px">
+        <p> SHRIYA </p>
+      </div>
+    </div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <a href="www.google.com">
+      <button class="animated-button">
+        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+        <span class="text">Get Started</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+      </button>
+      </a>
+      
+      
+   <script src="assets/js/index.js"></script>
+    </article>
+  </section>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+
+
+  
 
 </body>
 
+<footer>
+  <h4>Let's Connect</h4>
+  
+<ul class="example-2">
+  <li class="icon-content">
+    <a
+      href="https://linkedin.com/"
+      aria-label="LinkedIn"
+      data-social="linkedin"
+    >
+      <div class="filled"></div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-linkedin"
+        viewBox="0 0 16 16"
+        xml:space="preserve"
+      >
+        <path
+          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </a>
+    <div class="tooltip">LinkedIn</div>
+  </li>
+  <li class="icon-content">
+    <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+      <div class="filled"></div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-github"
+        viewBox="0 0 16 16"
+        xml:space="preserve"
+      >
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </a>
+    <div class="tooltip">GitHub</div>
+  </li>
+  <li class="icon-content">
+    <a
+      href="https://www.instagram.com/"
+      aria-label="Instagram"
+      data-social="instagram"
+    >
+      <div class="filled"></div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-instagram"
+        viewBox="0 0 16 16"
+        xml:space="preserve"
+      >
+        <path
+          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </a>
+    <div class="tooltip">Instagram</div>
+  </li>
+  <li class="icon-content">
+    <a href="https://youtube.com/" aria-label="Youtube" data-social="youtube">
+      <div class="filled"></div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-youtube"
+        viewBox="0 0 16 16"
+        xml:space="preserve"
+      >
+        <path
+          d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </a>
+    <div class="tooltip">Youtube</div>
+  </li>
+</ul>
+
+
+</footer>
 </html>
