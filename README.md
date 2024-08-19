@@ -27,3 +27,24 @@ To clone the repository, open your terminal and run the following command:
 
 ```bash
 git clone https://github.com/arte5craft/Hackathon.git
+```
+## Contact Details
+
+  Authors and Email ID : Shriya Arunkumar - arunkumarshriya@gmail.com
+                          Dhyeya Anand - dhyeyaanand@gmail.com
+
+## File Manifest
+
+1. HTML Files - 
+    - login.html
+    - index.html
+    - dashboard.html
+    - guide.html
+2. CSS Files -
+   - guide.css
+   - login.css
+   - main.css
+   - style.css
+3. JavaScript Files -
+   - index.js
+   - main.js
