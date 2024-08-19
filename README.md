@@ -26,4 +26,4 @@ Before cloning and setting up the project, ensure you have the following install
 To clone the repository, open your terminal and run the following command:
 
 ```bash
-git clone https://github.com/your-username/Hackathon.git
+git clone https://github.com/arte5craft/Hackathon.git
